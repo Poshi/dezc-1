@@ -29,7 +29,7 @@ services:
     ports:
       - "8080:80"
     volumes:
-      - ./data_pgadmin:/var/lib/pgadmin
+      - data_pgadmin:/var/lib/pgadmin
     networks:
       - dezc
 
@@ -37,3 +37,6 @@ networks:
   dezc:
     name: dezc
     driver: bridge
+
+volumes:
+  data_pgadmin:
