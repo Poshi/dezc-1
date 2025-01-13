@@ -3,16 +3,9 @@
 To answer the questions of the quiz, just execute the different shell scripts
 in order.
 
-There are a couple of shell scripts that need some previous set-up.
-These are question 3 and 7.
-For them, there's a pre-question*.sh script that perform the appropriate setup.
-
-You will have to modify your `variables.tf` file to point to your own
-Google Cloud Platform credentials and to adjust the project name to one of
-your own.
-
-Also, don't forget the final `terraform destroy` if you don't want to keep
-those resources and be billed for them.
+There is a shell script that need some previous set-up.
+This is question 3.
+For it, there's a pre-question3.sh script that perform the appropriate setup.
 
 ## Warning
 
