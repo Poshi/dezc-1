@@ -5,8 +5,8 @@ from sqlalchemy import create_engine
 
 # URL constants
 zones_url="https://d37ci6vzurychx.cloudfront.net/misc/taxi_zone_lookup.csv"
-green_taxi_csv_url = "https://github.com/DataTalksClub/nyc-tlc-data/releases/download/green/green_tripdata_2019-09.csv.gz"
-green_taxi_parquet_url = "https://d37ci6vzurychx.cloudfront.net/trip-data/green_tripdata_2019-09.parquet"
+green_taxi_csv_url = "https://github.com/DataTalksClub/nyc-tlc-data/releases/download/green/green_tripdata_2019-10.csv.gz"
+green_taxi_parquet_url = "https://d37ci6vzurychx.cloudfront.net/trip-data/green_tripdata_2019-10.parquet"
 
 # Read zones data
 zones_dtypes = {
