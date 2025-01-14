@@ -10,17 +10,20 @@ SELECT
 	COUNT(*) as n_trips
 FROM
 	green_taxi_data
+WHERE
+		TO_CHAR(CAST(lpep_pickup_datetime AS DATE), 'YYYY-MM') = '2019-10'
+	AND TO_CHAR(CAST(lpep_dropoff_datetime AS DATE), 'YYYY-MM') = '2019-10'
 GROUP BY
 	trip_length
 ORDER BY
 	trip_length;
 
 -- Output:
--- "Question 3:"	"dist_1"	104838
--- "Question 3:"	"dist_2"	199013
--- "Question 3:"	"dist_3"	109645
--- "Question 3:"	"dist_4"	27688
--- "Question 3:"	"dist_5"	35202
+-- "Question 3:"	"dist_1"	104802
+-- "Question 3:"	"dist_2"	198924
+-- "Question 3:"	"dist_3"	109603
+-- "Question 3:"	"dist_4"	27678
+-- "Question 3:"	"dist_5"	35189
 
 SELECT
 	CONCAT('Question 4: ', CAST(lpep_pickup_datetime AS DATE))
@@ -61,6 +64,8 @@ FROM
 	JOIN zones AS d ON t."DOLocationID"=d."LocationID"
 WHERE
 	p."Zone" = 'East Harlem North'
+	AND TO_CHAR(CAST(lpep_pickup_datetime AS DATE), 'YYYY-MM') = '2019-10'
+	AND TO_CHAR(CAST(lpep_dropoff_datetime AS DATE), 'YYYY-MM') = '2019-10'
 GROUP BY
 	d."Zone"
 ORDER BY
